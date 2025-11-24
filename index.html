@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ELITE DEALS</title>
+<style>
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+
+/* Body */
+body { 
+  transition: background 0.3s, color 0.3s; 
+  background: #f0f0f0; 
+  color: #111; 
+  overflow-x: hidden;
+}
+body.dark { background: #111; color: #f0f0f0; }
+
+/* Header */
+header { display: flex; justify-content: space-between; align-items: center; padding: 10px 20px; background: #6200ea; color: #fff; }
+header h1 { font-size: 1.8rem; }
+header p { font-size: 0.9rem; }
+header .icons img { width: 30px; margin-left: 10px; cursor: pointer; transition: transform 0.3s; }
+header .icons img:hover { transform: scale(1.2); }
+
+/* Top bar */
+.top-bar { display: flex; justify-content: space-between; padding: 5px 20px; background: #ddd; font-size: 0.9rem; }
+body.dark .top-bar { background: #222; color: #fff; }
+
+/* Switches */
+.switch { cursor: pointer; margin-left: 10px; }
+
+/* Scroll quotes */
+.scroll-section { padding: 20px; background: #e0e0e0; }
+body.dark .scroll-section { background: #222; }
+
+/* Pages */
+.pages { display: flex; overflow-x: hidden; scroll-behavior: smooth; }
+.page { min-width: 100vw; padding: 20px; }
+.service-table, .offer-tips { width: 100%; border-collapse: collapse; margin-top: 10px; }
+.service-table th, .service-table td { border: 1px solid #999; padding: 8px; text-align: left; }
+body.dark .service-table th, body.dark .service-table td { border-color: #555; }
+
+/* Page buttons */
+.page-buttons { display: flex; justify-content: center; margin: 10px 0; }
+.page-buttons button { margin: 0 5px; padding: 5px 10px; cursor: pointer; }
+
+/* Language hidden */
+.ar { display: none; }
+</style>
+</head>
+<body>
+
+<!-- Top bar -->
+<div class="top-bar">
+  <div id="datetime">Date & Time</div>
+  <div>
+    <span class="switch" id="mode-switch">☀️/🌙</span>
+    <span class="switch" id="lang-switch">EN/AR</span>
+  </div>
+</div>
+
+<!-- Header -->
+<header>
+  <div>
+    <h1 class="en">ELITE DEALS</h1>
+    <h1 class="ar">العروض المميزة</h1>
+    <p class="en">TURN YOUR IDEAS INTO DEALS</p>
+    <p class="ar">حوّل أفكارك إلى صفقات</p>
+  </div>
+  <div class="icons">
+    <a href="https://www.instagram.com/anas__.elk?igsh=MjF3dWpsM2xlZHdh" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+    </a>
+    <a href="#">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Qr-Icon.png" alt="QR Code">
+    </a>
+  </div>
+</header>
+
+<!-- Scroll quotes -->
+<div class="scroll-section">
+  <p class="en">"Providing ready-to-use project paths with a clear and guaranteed plan for fastest results."</p>
+  <p class="ar">نوفر مسارات جاهزة للبدء في مشروعك مع خطة واضحة ومضمونة للوصول بأسرع وقت ممكن.</p>
+  <p class="en">For any other service request, please contact us via private message.</p>
+  <p class="ar">لرغبتك في أي خدمة أخرى، المرجو مراسلتنا عبر الخاص</p>
+</div>
+
+<!-- Pages -->
+<div class="pages">
+  <!-- Page 1: Services -->
+  <div class="page">
+    <h2 class="en">MES SERVICE</h2>
+    <h2 class="ar">خدماتنا</h2>
+    <table class="service-table">
+      <tr><th class="en">Service</th><th class="en">Price</th></tr>
+      <tr><td class="en">Logo designs</td><td>$2</td></tr>
+      <tr><td class="en">Instagram followers</td><td>from $1.5</td></tr>
+      <tr><td class="en">TikTok followers</td><td>from $2</td></tr>
+      <tr><td class="en">ChatGPT access</td><td>from $5</td></tr>
+      <tr><td class="en">Netflix</td><td>$6</td></tr>
+      <tr><td class="en">Canva Pro lifetime</td><td>$2</td></tr>
+      <tr><td class="en">…and more services</td><td>–</td></tr>
+
+      <tr><th class="ar">الخدمة</th><th class="ar">السعر</th></tr>
+      <tr><td class="ar">تصميم شعارات</td><td>$2</td></tr>
+      <tr><td class="ar">متابعين إنستغرام</td><td>ابتداءً من $1.5</td></tr>
+      <tr><td class="ar">متابعين تيك توك</td><td>ابتداءً من $2</td></tr>
+      <tr><td class="ar">الوصول إلى ChatGPT</td><td>ابتداءً من $5</td></tr>
+      <tr><td class="ar">Netflix</td><td>$6</td></tr>
+      <tr><td class="ar">Canva Pro مدى الحياة</td><td>$2</td></tr>
+      <tr><td class="ar">…والمزيد</td><td>–</td></tr>
+    </table>
+  </div>
+
+  <!-- Page 2: Offers -->
+  <div class="page">
+    <h2 class="en">Offers</h2>
+    <h2 class="ar">العروض</h2>
+    <p class="en">We provide a ready-to-start path for a successful project, with a precise and tested plan ensuring the best launch without wasting time or effort.</p>
+    <p class="ar">نقدم لك طريقًا جاهزًا لبداية مشروع ناجح، مع خطة دقيقة ومجربة تضمن أفضل انطلاقة بدون ضياع الوقت أو الجهد.</p>
+    <h3 class="en">Tips & Advice</h3>
+    <h3 class="ar">نصائح وإرشادات</h3>
+    <ul>
+      <li class="en">Always double-check your orders before requesting services.</li>
+      <li class="en">Follow instructions for each platform to get the best results.</li>
+      <li class="en">Stay safe: only share minimal personal info when ordering online.</li>
+
+      <li class="ar">تحقق دائمًا من طلباتك قبل تقديم الخدمات.</li>
+      <li class="ar">اتبع التعليمات لكل منصة للحصول على أفضل النتائج.</li>
+      <li class="ar">كن حذرًا: شارك الحد الأدنى فقط من المعلومات الشخصية عند الطلب.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Page buttons -->
+<div class="page-buttons">
+  <button onclick="scrollToPage(0)">1</button>
+  <button onclick="scrollToPage(1)">2</button>
+</div>
+
+<script>
+// Live Date & Time
+function updateDateTime() {
+  const now = new Date();
+  document.getElementById('datetime').textContent = now.toLocaleString();
+}
+setInterval(updateDateTime, 1000);
+updateDateTime();
+
+// Light/Dark mode
+document.getElementById('mode-switch').addEventListener('click', () => {
+  document.body.classList.toggle('dark');
+});
+
+// Language switch
+document.getElementById('lang-switch').addEventListener('click', () => {
+  document.querySelectorAll('.en').forEach(el => el.style.display = el.style.display === 'none' ? '' : 'none');
+  document.querySelectorAll('.ar').forEach(el => el.style.display = el.style.display === 'none' ? '' : 'none');
+});
+
+// Horizontal page scroll
+function scrollToPage(index) {
+  const pages = document.querySelector('.pages');
+  pages.scrollTo({ left: index * window.innerWidth, behavior: 'smooth' });
+}
+</script>
+
+</body>
+                                                  </html>
